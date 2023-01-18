@@ -1,46 +1,45 @@
 import styled from "styled-components"
 import { FlexBox, Grid } from "../../styles"
 import { Button } from "../atoms"
-import HouseImg from "../../assets/images/casaPiscinaAd2.jpg"
-import data from "../../data.json"
-import { FrontCardHouse, BackCardHouse } from "./index"
+import { BackCardHouse } from "./index"
+import { useFetch } from "../../hooks/index"
+import { urls } from "../../constants/index"
 
 const HousesStyled = styled(FlexBox)`
   width: 100%;
 
-  @media (min-width: 640px) {
-    width: 55%;
+  @media (min-width: 650px) {
+    width: 50%;
   }
 `
 
 function Houses() {
-  const apartments = data.apartments
+  const { isSuccess, isError, data, loading } = useFetch(urls.apartments)
   return (
-    <HousesStyled gap="1rem">
-      <Grid>
-        {apartments.map((house) => {
-          return house === apartments[0] ? (
-            <FrontCardHouse
-              image={HouseImg}
-              name={house.description}
-              text={house.price}
-              key={house.key}
-            />
-          ) : (
-            <BackCardHouse
-              image={HouseImg}
-              name={house.description}
-              text={house.price}
-              key={house.key}
-            />
-          )
-        })}
-      </Grid>
+    <>
+      {loading && <p>Loading...</p>}
+      {isError && <p>There was an error..</p>}
+      {isSuccess && (
+        <HousesStyled gap="1rem">
+          <Grid>
+            {data.map((house) => {
+              return (
+                <BackCardHouse
+                  image={house.url}
+                  name={house.description}
+                  text={house.price}
+                  key={house.key}
+                />
+              )
+            })}
+          </Grid>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button text="Cargar más"></Button>
-      </div>
-    </HousesStyled>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button text="Cargar más"></Button>
+          </div>
+        </HousesStyled>
+      )}
+    </>
   )
 }
 

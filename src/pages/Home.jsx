@@ -1,15 +1,16 @@
-import styled from 'styled-components';
-import { FlexBox } from '../styles';
-import { Body } from '../components/layout';
-import { Houses, Map } from '../components/organisms/index';
+import styled from "styled-components"
+import { FlexBox } from "../styles"
+import { Body } from "../components/layout"
+import { Houses, Map } from "../components/organisms/index"
 
 const HomeStyled = styled(FlexBox)`
   width: 100%;
+  flex-direction: column;
 
   @media (min-width: 640px) {
     flex-direction: row;
   }
-`;
+`
 
 function Home() {
   return (
@@ -19,6 +20,6 @@ function Home() {
         <Map />
       </HomeStyled>
     </Body>
-  );
+  )
 }
-export default Home;
+export default Home

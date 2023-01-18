@@ -13,7 +13,6 @@ const HeaderStyled = styled(FlexBox)`
   a:focused {
     text-decoration: none;
   }
-  }
 `
 
 function Header() {

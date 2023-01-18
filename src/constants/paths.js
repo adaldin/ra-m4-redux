@@ -1,4 +1,4 @@
-export const urls = {
+const path = {
   home: {
     url: "/",
     label: "Buscador",
@@ -12,3 +12,4 @@ export const urls = {
     label: "Mi Perfil",
   },
 }
+export default path

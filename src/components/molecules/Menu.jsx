@@ -3,42 +3,30 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { colors } from "../../styles"
 import FlexBox from "../../styles/FlexBox"
-import { urls } from "../../utils/urls"
+import { paths } from "../../constants/index"
 
 const MenuStyled = styled(FlexBox)`
   list-style-type: none;
   gap: 1rem;
   a:link {
-    text-decoration: none;
-    color: ${colors.font.base};
-  }
-  a:focused {
-    text-decoration: none;
-  }
-  a:hover {
-    color: ${({ hoverColor }) => (hoverColor ? hoverColor : "")};
-  }
-  a:visited {
-    color: green;
-    font-weight: bolder;
-  }
+    li {
+      color: ${colors.font.base};
+      &:hover {
+        color: ${({ hoverColor }) => (hoverColor ? hoverColor : "")};
+      }
+    }
 `
-// li {
-//   color: ${colors.font.base};
-//   &:hover {
-//     color: ${({ hoverColor }) => (hoverColor ? hoverColor : "")};
-//   }
 export function Menu() {
   return (
     <MenuStyled as="ul" direction="row" justify="end" hoverColor={colors.main}>
-      <Link to={urls.home.url}>
-        <li>{urls.home.label} </li>
+      <Link to={paths.home.url}>
+        <li>{paths.home.label} </li>
       </Link>
-      <Link to={urls.data.url}>
-        <li>{urls.data.label}</li>
+      <Link to={paths.data.url}>
+        <li>{paths.data.label}</li>
       </Link>
-      <Link to={urls.profile.url}>
-        <li>{urls.profile.label}</li>
+      <Link to={paths.profile.url}>
+        <li>{paths.profile.label}</li>
       </Link>
     </MenuStyled>
   )

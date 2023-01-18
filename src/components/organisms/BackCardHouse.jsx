@@ -6,11 +6,12 @@ import { Text, Title, Card, Button } from "../atoms/index"
 
 const CoverImg = styled.img`
   width: 100%;
-  height: 60%;
+  height: 100px;
   object-fit: cover;
   border-radius: 6px;
 `
 const CardBody = styled(FlexBox)`
+  height: 100px;
   padding: 0.3rem;
   ${Text} {
     opacity: 0.8;
