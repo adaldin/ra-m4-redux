@@ -9,7 +9,7 @@ const HousesStyled = styled(FlexBox)`
   width: 100%;
 
   @media (min-width: 650px) {
-    width: 50%;
+    width: 54%;
   }
 `
 
