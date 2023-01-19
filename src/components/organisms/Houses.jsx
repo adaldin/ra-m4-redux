@@ -15,6 +15,7 @@ const HousesStyled = styled(FlexBox)`
 
 function Houses() {
   const { isSuccess, isError, data, loading } = useFetch(urls.apartments)
+
   return (
     <>
       {loading && <p>Loading...</p>}

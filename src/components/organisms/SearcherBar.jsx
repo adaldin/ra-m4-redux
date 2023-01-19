@@ -1,6 +1,6 @@
-import { colors, FlexBox } from "../../styles"
-import { Button, Icon } from "../atoms"
-import { InputGroupText } from "../molecules"
+import { FlexBox } from "../../styles"
+import { Button } from "../atoms"
+import { SelectGroup } from "../molecules"
 
 function SearcherBar() {
   const handleChange = (e) => {
@@ -13,17 +13,30 @@ function SearcherBar() {
 
   return (
     <FlexBox direction="row" gap="1rem" align="center">
-      <InputGroupText
-        name="searcher"
-        id="searcher"
-        onChange={handleChange}
-        label="Piso, chalet o garage.."
+      <SelectGroup
+        id="type"
+        label="Tipo"
+        defaultText="Piso, chalet o garaje..."
+        hidden={false}
+        // aquí debo importar de state options
+        options={[
+          { value: "piso", text: "Piso" },
+          { value: "garaje", text: "Garaje" },
+          { value: "chalets", text: "Chalets" },
+        ]}
       />
-      <InputGroupText
-        name="searcher"
-        id="searcher"
-        onChange={handleChange}
-        label="Madrid, Barcelona, Zaragoza"
+
+      <SelectGroup
+        id="ciudad"
+        label="Ciudad"
+        defaultText="Madrid, Barcelona o Zaragoza..."
+        hidden={false}
+        // aquí debo importar de state options
+        options={[
+          { value: "barcelona", text: "Barcelona" },
+          { value: "madrid", text: "Madrid" },
+          { value: "zaragoza", text: "Zaragoza" },
+        ]}
       />
       <Button
         icon="search"

@@ -5,6 +5,8 @@
       "url": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
       "alt": "casa con piscina",
       "price": "939.000€",
+      "type": "garaje",
+      "city": "Barcelona",
       "description": "Piso en Barcelona, Gracia..."
     },
 
@@ -13,6 +15,8 @@
       "url": "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con cama doble",
       "price": "939.000€",
+      "type": "piso",
+      "city": "Madrid",
       "description": "Piso en Barcelona, Gracia..."
     },
 
@@ -21,6 +25,8 @@
       "url": "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con mucho verde",
       "price": "939.000€",
+      "type": "chalets",
+      "city": "Zaragoza",
       "description": "Piso en Barcelona, Gracia..."
     },
 
@@ -29,6 +35,8 @@
       "url": "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con despacho",
       "price": "939.000€",
+      "type": "garaje",
+      "city": "Madrid",
       "description": "Piso en Barcelona, Gracia..."
     },
 
@@ -37,6 +45,8 @@
       "url": "https://images.pexels.com/photos/534228/pexels-photo-534228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso cocina abierta",
       "price": "939.000€",
+      "type": "piso",
+      "city": "Barcelona",
       "description": "Piso en Barcelona, Gracia..."
     },
 
@@ -45,6 +55,8 @@
       "url": "https://images.pexels.com/photos/14815621/pexels-photo-14815621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso moderno",
       "price": "939.000€",
+      "type": "chalets",
+      "city": "Barcelona",
       "description": "Piso en Barcelona, Gracia..."
     },
 
@@ -53,6 +65,8 @@
       "url": "https://images.pexels.com/photos/13460178/pexels-photo-13460178.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con hamaca",
       "price": "939.000€",
+      "type": "garaje",
+      "city": "zaragoza",
       "description": "Piso en Barcelona, Gracia..."
     },
     {
@@ -60,6 +74,8 @@
       "url": "https://images.pexels.com/photos/5524265/pexels-photo-5524265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso moderno",
       "price": "939.000€",
+      "type": "piso",
+      "city": "Madrid",
       "description": "Piso en Barcelona, Gracia..."
     },
     {
@@ -67,13 +83,17 @@
       "url": "https://images.pexels.com/photos/5353946/pexels-photo-5353946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con hamaca",
       "price": "939.000€",
+      "type": "chalets",
+      "city": "Madrid",
       "description": "Piso en Barcelona, Gracia..."
     },
     {
       "key": 10,
       "url": "https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "alt": "piso con Amaca",
+      "alt": "piso con Hamaca",
       "price": "939.000€",
+      "type": "garaje",
+      "city": "Madrid",
       "description": "Piso en Barcelona, Gracia..."
     },
     {
@@ -81,6 +101,8 @@
       "url": "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso moderno",
       "price": "939.000€",
+      "type": "piso",
+      "city": "Madrid",
       "description": "Piso en Barcelona, Gracia..."
     }
   ]
