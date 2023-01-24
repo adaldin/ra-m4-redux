@@ -9,8 +9,8 @@ function useFetch(url) {
     setLoading(true)
     setError(null)
 
-    fetch(url)
-      .then((response) => response.json())
+    fetch(`${url}?_page=1&_limit=9`)
+      .then((response) => response.json("Link"))
       .then((d) => {
         setData(d)
         setLoading(false)

@@ -5,7 +5,7 @@ import map from "../../assets/images/map.png"
 const StyledMap = styled(FlexBox)`
   border-radius: 0.4rem;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   border: 1px solid ${colors.main};
   background-image: url(${map});
   background-size: cover;
