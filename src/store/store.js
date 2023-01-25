@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit"
-import houseReducer from "./houseSlice"
+import houses from "./houses.slice"
 
 export const store = configureStore({
   reducer: {
-    house: houseReducer,
+    houses: houseReducer,
   },
 })

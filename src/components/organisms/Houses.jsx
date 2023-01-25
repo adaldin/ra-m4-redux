@@ -4,6 +4,9 @@ import { Button } from "../atoms"
 import { BackCardHouse } from "./index"
 import { useFetch } from "../../hooks/index"
 import { urls } from "../../constants/index"
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
+import { getHouses } from "../../store/houses.slice"
 
 const HousesStyled = styled(FlexBox)`
   width: 100%;
@@ -14,16 +17,23 @@ const HousesStyled = styled(FlexBox)`
 `
 
 function Houses() {
-  const { isSuccess, isError, data, loading } = useFetch(urls.apartments)
+  const dispatch = useDispatch()
+  const state = useSelector((state) => state.houses)
+  // console.log("desde houses", state)
+  // const { isSuccess, isError, data, loading } = useFetch(urls.apartments)
+
+  useEffect(() => {
+    dispatch(getHouses())
+  }, [dispatch])
 
   return (
     <>
-      {loading && <p>Loading...</p>}
-      {isError && <p>There was an error..</p>}
-      {isSuccess && (
+      {state.reqStatus === "loading" && <p>Loading...</p>}
+      {state.reqStatus === "failed" && <p>There was an error..</p>}
+      {state.reqStatus === "success" && (
         <HousesStyled gap="1rem">
           <Grid>
-            {data.map((house) => {
+            {state.houses.map((house) => {
               return (
                 <BackCardHouse
                   image={house.url}
