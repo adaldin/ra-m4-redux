@@ -6,7 +6,9 @@ import { useFetch } from "../../hooks/index"
 import { urls } from "../../constants/index"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
-import { getHouses } from "../../store/houses.slice"
+import { incrementHouses } from "../../store/housesSlice"
+
+// import { getHouses } from "../../store/housesSlice"
 
 const HousesStyled = styled(FlexBox)`
   width: 100%;
@@ -17,23 +19,28 @@ const HousesStyled = styled(FlexBox)`
 `
 
 function Houses() {
-  const dispatch = useDispatch()
-  const state = useSelector((state) => state.houses)
+  // const dispatch = useDispatch()
+  // const state = useSelector((state) => state.houses)
   // console.log("desde houses", state)
-  // const { isSuccess, isError, data, loading } = useFetch(urls.apartments)
+  const { isSuccess, isError, data, loading } = useFetch(urls.apartments)
+
+  const houses = useSelector((state) => state.houses)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getHouses())
-  }, [dispatch])
+    dispatch(incrementHouses("new house de houses.jsx"))
+    console.log(houses)
+    console.log(data)
+  }, [])
 
   return (
     <>
-      {state.reqStatus === "loading" && <p>Loading...</p>}
-      {state.reqStatus === "failed" && <p>There was an error..</p>}
-      {state.reqStatus === "success" && (
+      {loading === "loading" && <p>Loading...</p>}
+      {isError === "failed" && <p>There was an error..</p>}
+      {isSuccess === "success" && (
         <HousesStyled gap="1rem">
           <Grid>
-            {state.houses.map((house) => {
+            {data.map((house) => {
               return (
                 <BackCardHouse
                   image={house.url}
