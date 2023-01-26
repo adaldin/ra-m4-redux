@@ -37,6 +37,7 @@ function Button({
   onClick,
   fontSize,
   icon,
+  disabled = false,
 }) {
   return (
     <StyledButton
@@ -45,6 +46,7 @@ function Button({
       style={{ ...buttonStyles }}
       onClick={onClick}
       textColor={textColor}
+      disabled={disabled}
     >
       {icon ? (
         <Icon size={24} name="search">

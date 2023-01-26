@@ -1,10 +1,19 @@
+import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { FlexBox } from "../../styles"
 import { Button } from "../atoms"
 import { SelectGroup } from "../molecules"
 
 function SearcherBar() {
+  const houses = useSelector((state) => state.houses.houses)
+  const dispatch = useDispatch()
+  const [filterType, setFilterType] = useState({})
+
   const handleChange = (e) => {
-    console.log("hola")
+    setFilterType((prevFilterType) => {
+      prevFilterType[event.target.id] = event.target.value
+      return prevFilterType
+    })
   }
 
   const handleClick = (e) => {

@@ -1,7 +1,7 @@
 {
   "apartments": [
     {
-      "key": 1,
+      "id": 1,
       "url": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
       "alt": "casa con piscina",
       "price": "939.000€",
@@ -11,7 +11,7 @@
     },
 
     {
-      "key": 2,
+      "id": 2,
       "url": "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con cama doble",
       "price": "939.000€",
@@ -21,7 +21,7 @@
     },
 
     {
-      "key": 3,
+      "id": 3,
       "url": "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con mucho verde",
       "price": "939.000€",
@@ -31,7 +31,7 @@
     },
 
     {
-      "key": 4,
+      "id": 4,
       "url": "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con despacho",
       "price": "939.000€",
@@ -41,7 +41,7 @@
     },
 
     {
-      "key": 5,
+      "id": 5,
       "url": "https://images.pexels.com/photos/534228/pexels-photo-534228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso cocina abierta",
       "price": "939.000€",
@@ -51,7 +51,7 @@
     },
 
     {
-      "key": 6,
+      "id": 6,
       "url": "https://images.pexels.com/photos/14815621/pexels-photo-14815621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso moderno",
       "price": "939.000€",
@@ -61,7 +61,7 @@
     },
 
     {
-      "key": 7,
+      "id": 7,
       "url": "https://images.pexels.com/photos/13460178/pexels-photo-13460178.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con hamaca",
       "price": "939.000€",
@@ -70,7 +70,7 @@
       "description": "Piso en Barcelona, Gracia..."
     },
     {
-      "key": 8,
+      "id": 8,
       "url": "https://images.pexels.com/photos/5524265/pexels-photo-5524265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso moderno",
       "price": "939.000€",
@@ -79,7 +79,7 @@
       "description": "Piso en Barcelona, Gracia..."
     },
     {
-      "key": 9,
+      "id": 9,
       "url": "https://images.pexels.com/photos/5353946/pexels-photo-5353946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con hamaca",
       "price": "939.000€",
@@ -88,7 +88,7 @@
       "description": "Piso en Barcelona, Gracia..."
     },
     {
-      "key": 10,
+      "id": 10,
       "url": "https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso con Hamaca",
       "price": "939.000€",
@@ -97,7 +97,7 @@
       "description": "Piso en Barcelona, Gracia..."
     },
     {
-      "key": 11,
+      "id": 11,
       "url": "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "alt": "piso moderno",
       "price": "939.000€",
