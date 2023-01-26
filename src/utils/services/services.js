@@ -8,4 +8,15 @@ export const byType = (house, type) => {
   return house.type.includes(type)
 }
 
-export const filteredHouses = (house, type, city) => byCity(house, city) && byType(house, type)
+export const filteredHouses = (house, city, type) => byCity(house, city) && byType(house, type)
+
+export const handleOptions = (category) => {
+  let newOptionsArr = category.map((option) => {
+    return {
+      value: option,
+      text: `${option.charAt(0).toUpperCase()}${option.slice(1)}`,
+    }
+  })
+
+  return newOptionsArr
+}

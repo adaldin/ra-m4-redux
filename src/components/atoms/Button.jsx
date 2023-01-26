@@ -25,6 +25,9 @@ const StyledButton = styled.button`
   &.blue-gradient {
     background: linear-gradient(90deg, ${colors.lightBlue}, ${colors.darkBlue});
   }
+
+  &.red-gradient {
+    background: ${colors.red};
   }
 `
 
@@ -49,7 +52,7 @@ function Button({
       disabled={disabled}
     >
       {icon ? (
-        <Icon size={24} name="search">
+        <Icon size={24} name={icon}>
           {icon}
         </Icon>
       ) : (

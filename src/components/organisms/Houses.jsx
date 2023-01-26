@@ -5,7 +5,7 @@ import { BackCardHouse } from "./index"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import { getHouses } from "../../store/housesSlice"
-import { byCity, byType, filteredHouses } from "../../utils/index"
+import { filteredHouses } from "../../utils/index"
 
 const HousesStyled = styled(FlexBox)`
   width: 100%;
