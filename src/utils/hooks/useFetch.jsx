@@ -8,8 +8,8 @@ function useFetch(url) {
   useEffect(() => {
     setLoading(true)
     setError(null)
-
-    fetch(`${url}?_page=1&_limit=9`)
+    // ?_page=1&_limit=9
+    fetch(url)
       .then((response) => response.json("Link"))
       .then((d) => {
         setData(d)

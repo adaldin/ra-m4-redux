@@ -25,6 +25,9 @@ const StyledButton = styled.button`
   &.blue-gradient {
     background: linear-gradient(90deg, ${colors.lightBlue}, ${colors.darkBlue});
   }
+
+  &.red-gradient {
+    background: ${colors.red};
   }
 `
 
@@ -37,6 +40,7 @@ function Button({
   onClick,
   fontSize,
   icon,
+  disabled = false,
 }) {
   return (
     <StyledButton
@@ -45,9 +49,10 @@ function Button({
       style={{ ...buttonStyles }}
       onClick={onClick}
       textColor={textColor}
+      disabled={disabled}
     >
       {icon ? (
-        <Icon size={24} name="search">
+        <Icon size={24} name={icon}>
           {icon}
         </Icon>
       ) : (

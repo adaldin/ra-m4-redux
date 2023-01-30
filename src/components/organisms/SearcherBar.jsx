@@ -1,43 +1,53 @@
+import { useEffect } from "react"
+import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getHouses, setHousesByCity, setHousesByType } from "../../store/housesSlice"
 import { FlexBox } from "../../styles"
+import { handleOptions } from "../../utils"
 import { Button } from "../atoms"
 import { SelectGroup } from "../molecules"
 
 function SearcherBar() {
-  const handleChange = (e) => {
-    console.log("hola")
+  const houses = useSelector((state) => state.houses.houses)
+  const dispatch = useDispatch()
+  const [categoryFilter, setCategoryFilter] = useState({})
+
+  const handleChange = (event) => {
+    setCategoryFilter((prevCategoryFilter) => {
+      const newCategory = { ...prevCategoryFilter }
+      newCategory[event.target.id] = event.target.value
+      return newCategory
+    })
   }
 
-  const handleClick = (e) => {
-    console.log("hola")
+  const handleClick = () => {
+    dispatch(setHousesByCity(categoryFilter.city))
+    dispatch(setHousesByType(categoryFilter.type))
   }
+
+  useEffect(() => {
+    dispatch(getHouses())
+  }, [dispatch])
 
   return (
     <FlexBox direction="row" gap="1rem" align="center">
+      <SelectGroup
+        id="city"
+        label="Ciudad"
+        defaultText="Madrid, Barcelona o Zaragoza..."
+        hidden={false}
+        options={handleOptions(houses.cities)}
+        onChange={handleChange}
+      />
       <SelectGroup
         id="type"
         label="Tipo"
         defaultText="Piso, chalet o garaje..."
         hidden={false}
-        // aquí debo importar de state options
-        options={[
-          { value: "piso", text: "Piso" },
-          { value: "garaje", text: "Garaje" },
-          { value: "chalets", text: "Chalets" },
-        ]}
+        options={handleOptions(houses.types)}
+        onChange={handleChange}
       />
 
-      <SelectGroup
-        id="ciudad"
-        label="Ciudad"
-        defaultText="Madrid, Barcelona o Zaragoza..."
-        hidden={false}
-        // aquí debo importar de state options
-        options={[
-          { value: "barcelona", text: "Barcelona" },
-          { value: "madrid", text: "Madrid" },
-          { value: "zaragoza", text: "Zaragoza" },
-        ]}
-      />
       <Button
         icon="search"
         iconStyles={{
@@ -50,6 +60,19 @@ function SearcherBar() {
           height: "30px",
         }}
         onClick={handleClick}
+      />
+      <Button
+        // TODO: btn to clear filters
+        icon="clear"
+        iconStyles={{
+          fill: 0,
+          size: 20,
+        }}
+        className="red-gradient"
+        buttonStyles={{
+          width: "30px",
+          height: "30px",
+        }}
       />
     </FlexBox>
   )
