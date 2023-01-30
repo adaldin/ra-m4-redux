@@ -8,7 +8,6 @@ export const getHouses = createAsyncThunk(
     try {
       const res = await fetch(`${urls.apartments}?_page=${page}&_limit=${max}`)
       const data = await res.json()
-      // Add _start and _end or _limit (an X-Total-Count header is included in the response)
       const items = res.headers.get("X-Total-Count")
 
       let loadMore = true
